@@ -6,4 +6,6 @@ dist/js-sdk-api-docs/
 release.sh
 
 *.swp
+
 .DS_Store
+.idea/
