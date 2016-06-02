@@ -11,9 +11,7 @@
 var AV = module.exports = {};
 
 AV._ = require('underscore');
-AV.VERSION = require('./constants').version;
-AV.serverURL = require('./constants').serverURL;
-AV.context = require('./constants').context;
+AV.VERSION = require('./version');
 AV.Promise = require('./promise');
 AV.XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 AV.localStorage = require('localStorage');
@@ -46,7 +44,7 @@ require('./bigquery')(AV);
 
 AV.AV = AV; // Backward compatibility
 
-},{"./acl":2,"./bigquery":4,"./cloudfunction":9,"./collection":10,"./constants":11,"./error":12,"./event":13,"./facebook":14,"./file":15,"./geopoint":16,"./history":17,"./insight":18,"./object":19,"./op":20,"./promise":21,"./push":22,"./query":23,"./relation":24,"./role":25,"./router":26,"./search":27,"./status":28,"./user":29,"./utils":30,"./view":31,"localStorage":5,"underscore":35,"xmlhttprequest":8}],2:[function(require,module,exports){
+},{"./acl":2,"./bigquery":4,"./cloudfunction":9,"./collection":10,"./error":11,"./event":12,"./facebook":13,"./file":14,"./geopoint":15,"./history":16,"./insight":17,"./object":18,"./op":19,"./promise":20,"./push":21,"./query":22,"./relation":23,"./role":24,"./router":25,"./search":26,"./status":27,"./user":28,"./utils":29,"./version":30,"./view":31,"localStorage":5,"underscore":35,"xmlhttprequest":8}],2:[function(require,module,exports){
 'use strict';
 var _ = require('underscore');
 
@@ -966,15 +964,6 @@ module.exports = function(AV) {
 },{"underscore":35}],11:[function(require,module,exports){
 'use strict';
 
-module.exports = {
-    version: "js0.6.4",
-    serverURL: 'http://localhost:8080',
-    context: '/j3'
-};
-
-},{}],12:[function(require,module,exports){
-'use strict';
-
 var _ = require('underscore');
 
 module.exports = function(AV) {
@@ -1320,7 +1309,7 @@ module.exports = function(AV) {
 
 };
 
-},{"underscore":35}],13:[function(require,module,exports){
+},{"underscore":35}],12:[function(require,module,exports){
 /*global _: false */
 module.exports = function(AV) {
   var eventSplitter = /\s+/;
@@ -1475,7 +1464,7 @@ module.exports = function(AV) {
   AV.Events.unbind = AV.Events.off;
 };
 
-},{}],14:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -1662,7 +1651,7 @@ module.exports = function(AV) {
 
 };
 
-},{"underscore":35}],15:[function(require,module,exports){
+},{"underscore":35}],14:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -2252,7 +2241,7 @@ module.exports = function(AV) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./browserify-wrapper/parse-base64":6,"./browserify-wrapper/upload":7,"path":33,"underscore":35}],16:[function(require,module,exports){
+},{"./browserify-wrapper/parse-base64":6,"./browserify-wrapper/upload":7,"path":33,"underscore":35}],15:[function(require,module,exports){
 var _ = require('underscore');
 
 /*global navigator: false */
@@ -2426,7 +2415,7 @@ module.exports = function(AV) {
   };
 };
 
-},{"underscore":35}],17:[function(require,module,exports){
+},{"underscore":35}],16:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -2690,7 +2679,7 @@ module.exports = function(AV) {
   });
 };
 
-},{"underscore":35}],18:[function(require,module,exports){
+},{"underscore":35}],17:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -2833,7 +2822,7 @@ module.exports = function(AV) {
 
 };
 
-},{"underscore":35}],19:[function(require,module,exports){
+},{"underscore":35}],18:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -4362,7 +4351,7 @@ module.exports = function(AV) {
 
 };
 
-},{"underscore":35}],20:[function(require,module,exports){
+},{"underscore":35}],19:[function(require,module,exports){
 'use strict';
 var _ = require('underscore');
 
@@ -4894,7 +4883,7 @@ module.exports = function(AV) {
 
 };
 
-},{"underscore":35}],21:[function(require,module,exports){
+},{"underscore":35}],20:[function(require,module,exports){
 (function (process){
 'use strict';
 var _ = require('underscore');
@@ -5489,7 +5478,7 @@ Promise.prototype.finally = Promise.prototype.always;
 Promise.prototype.try = Promise.prototype.done;
 
 }).call(this,require('_process'))
-},{"_process":34,"underscore":35}],22:[function(require,module,exports){
+},{"_process":34,"underscore":35}],21:[function(require,module,exports){
 'use strict';
 
 module.exports = function(AV) {
@@ -5549,7 +5538,7 @@ module.exports = function(AV) {
   };
 };
 
-},{}],23:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -6488,7 +6477,7 @@ module.exports = function(AV) {
    });
 };
 
-},{"underscore":35}],24:[function(require,module,exports){
+},{"underscore":35}],23:[function(require,module,exports){
 'use strict';
 var _ = require('underscore');
 
@@ -6605,7 +6594,7 @@ module.exports = function(AV) {
   };
 };
 
-},{"underscore":35}],25:[function(require,module,exports){
+},{"underscore":35}],24:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -6744,7 +6733,7 @@ module.exports = function(AV) {
   });
 };
 
-},{"underscore":35}],26:[function(require,module,exports){
+},{"underscore":35}],25:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -6869,7 +6858,7 @@ module.exports = function(AV) {
   AV.Router.extend = AV._extend;
 };
 
-},{"underscore":35}],27:[function(require,module,exports){
+},{"underscore":35}],26:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -7155,7 +7144,7 @@ module.exports = function(AV) {
   });
 };
 
-},{"underscore":35}],28:[function(require,module,exports){
+},{"underscore":35}],27:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -7532,7 +7521,7 @@ module.exports = function(AV) {
 
 };
 
-},{"underscore":35}],29:[function(require,module,exports){
+},{"underscore":35}],28:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -8528,7 +8517,7 @@ module.exports = function(AV) {
   });
 };
 
-},{"underscore":35}],30:[function(require,module,exports){
+},{"underscore":35}],29:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -8611,39 +8600,14 @@ module.exports = function(AV) {
   }
 
   /**
-   * Call this method first to set up your authentication tokens for AV.
-   * You can get your keys from the Data Browser on avoscloud.com.
-   * @param {String} applicationId Your AV Application ID.
-   * @param {String} applicationKey Your AV JavaScript Key.
-   * @param {String} masterKey (optional) Your AVOSCloud Master Key. (Node.js only!).
+   * Call this method first to set up your backend server for AV.
+   * @param {String} serverURL Your backend server URL.
+   * @param {String} context Your backend server context.
    */
-  AV.initialize = function(applicationId, applicationKey, masterKey) {
-    if (masterKey) {
-      throw new Error("AV.initialize() was passed a Master Key, which is only " +
-        "allowed from within Node.js.");
-    }
-    AV._initialize(applicationId, applicationKey,masterKey);
+  AV.initialize = function(serverURL, context) {
+    AV.serverURL = serverURL;
+    AV.context = context;
   };
-
-  /**
-   * Call this method first to set up authentication tokens for AV.
-   * This method is for AV's own private use.
-   * @param {String} applicationId Your AV Application ID.
-   * @param {String} applicationKey Your AV Application Key
-   */
-   AV._initialize = function(applicationId, applicationKey, masterKey) {
-    if (AV.applicationId !== undefined &&
-        applicationId !== AV.applicationId  &&
-        applicationKey !== AV.applicationKey &&
-        masterKey !== AV.masterKey) {
-      console.warn('AVOSCloud SDK is already initialized, please don\'t reinitialize it.');
-    }
-    AV.applicationId = applicationId;
-    AV.applicationKey = applicationKey;
-    AV.masterKey = masterKey;
-    AV._useMasterKey = false;
-  };
-
 
   /**
    * Call this method to set production environment variable.
@@ -8853,6 +8817,9 @@ module.exports = function(AV) {
    * @ignore
    */
   AV._request = function(route, className, objectId, method, dataObject) {
+    if (!AV.serverURL) {
+      throw "You must specify your server URL and context using AV.initialize.";
+    }
     if (route !== "batch" &&
         route !== "classes" &&
         route !== "files" &&
@@ -9169,7 +9136,12 @@ module.exports = function(AV) {
 };
 
 }).call(this,require('_process'))
-},{"_process":34,"underscore":35}],31:[function(require,module,exports){
+},{"_process":34,"underscore":35}],30:[function(require,module,exports){
+'use strict';
+
+module.exports = "js0.6.4-proper";
+
+},{}],31:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');

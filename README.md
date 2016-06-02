@@ -1,6 +1,14 @@
-# LeanCloud JavaScript SDK [![Build Status](https://travis-ci.org/leancloud/javascript-sdk.svg)](https://travis-ci.org/leancloud/javascript-sdk)
+# LeanCloud JavaScript SDK v0.6.4-proper branch
 
-JavaScript SDK for [LeanCloud](http://leancloud.cn/).
+Fork from JavaScript SDK for [LeanCloud](http://leancloud.cn/) `v0.6.4`.
+
+## 区别
+
+* `AV.initialize` 方法的入参修改为传递后端服务器的 `server URL` 和 `context`，如：
+
+  `AV.initialize('http://localhost:8080', '/demo');`
+
+* 目前仅支持基本的 CRUD 操作，不支持 CQL
 
 ## 使用方法请看 [官方文档](http://leancloud.cn/docs/js_guide.html)
 

@@ -274,9 +274,7 @@ module.exports = function(AV) {
 var AV = {};
 
 AV._ = require('underscore');
-AV.VERSION = require('./constants').version;
-AV.serverURL = require('./constants').serverURL;
-AV.context = require('./constants').context;
+AV.VERSION = require('./version');
 AV.Promise = require('./promise');
 AV.XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 AV.localStorage = require('localStorage');
@@ -305,7 +303,7 @@ require('./bigquery')(AV);
 global.AV = AV;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./acl":1,"./bigquery":3,"./cloudfunction":8,"./constants":9,"./error":10,"./event":11,"./file":12,"./geopoint":13,"./insight":14,"./object":15,"./op":16,"./promise":17,"./push":18,"./query":19,"./relation":20,"./role":21,"./search":22,"./status":23,"./user":24,"./utils":25,"localStorage":4,"underscore":29,"xmlhttprequest":7}],3:[function(require,module,exports){
+},{"./acl":1,"./bigquery":3,"./cloudfunction":8,"./error":9,"./event":10,"./file":11,"./geopoint":12,"./insight":13,"./object":14,"./op":15,"./promise":16,"./push":17,"./query":18,"./relation":19,"./role":20,"./search":21,"./status":22,"./user":23,"./utils":24,"./version":25,"localStorage":4,"underscore":29,"xmlhttprequest":7}],3:[function(require,module,exports){
 'use strict';
 
 module.exports = function(AV) {
@@ -547,15 +545,6 @@ module.exports = function(AV) {
 };
 
 },{"underscore":29}],9:[function(require,module,exports){
-'use strict';
-
-module.exports = {
-    version: "js0.6.4",
-    serverURL: 'http://localhost:8080',
-    context: '/j3'
-};
-
-},{}],10:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -903,7 +892,7 @@ module.exports = function(AV) {
 
 };
 
-},{"underscore":29}],11:[function(require,module,exports){
+},{"underscore":29}],10:[function(require,module,exports){
 /*global _: false */
 module.exports = function(AV) {
   var eventSplitter = /\s+/;
@@ -1058,7 +1047,7 @@ module.exports = function(AV) {
   AV.Events.unbind = AV.Events.off;
 };
 
-},{}],12:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -1648,7 +1637,7 @@ module.exports = function(AV) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./browserify-wrapper/parse-base64":5,"./browserify-wrapper/upload":6,"path":27,"underscore":29}],13:[function(require,module,exports){
+},{"./browserify-wrapper/parse-base64":5,"./browserify-wrapper/upload":6,"path":27,"underscore":29}],12:[function(require,module,exports){
 var _ = require('underscore');
 
 /*global navigator: false */
@@ -1822,7 +1811,7 @@ module.exports = function(AV) {
   };
 };
 
-},{"underscore":29}],14:[function(require,module,exports){
+},{"underscore":29}],13:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -1965,7 +1954,7 @@ module.exports = function(AV) {
 
 };
 
-},{"underscore":29}],15:[function(require,module,exports){
+},{"underscore":29}],14:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -3494,7 +3483,7 @@ module.exports = function(AV) {
 
 };
 
-},{"underscore":29}],16:[function(require,module,exports){
+},{"underscore":29}],15:[function(require,module,exports){
 'use strict';
 var _ = require('underscore');
 
@@ -4026,7 +4015,7 @@ module.exports = function(AV) {
 
 };
 
-},{"underscore":29}],17:[function(require,module,exports){
+},{"underscore":29}],16:[function(require,module,exports){
 (function (process){
 'use strict';
 var _ = require('underscore');
@@ -4621,7 +4610,7 @@ Promise.prototype.finally = Promise.prototype.always;
 Promise.prototype.try = Promise.prototype.done;
 
 }).call(this,require('_process'))
-},{"_process":28,"underscore":29}],18:[function(require,module,exports){
+},{"_process":28,"underscore":29}],17:[function(require,module,exports){
 'use strict';
 
 module.exports = function(AV) {
@@ -4681,7 +4670,7 @@ module.exports = function(AV) {
   };
 };
 
-},{}],19:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -5620,7 +5609,7 @@ module.exports = function(AV) {
    });
 };
 
-},{"underscore":29}],20:[function(require,module,exports){
+},{"underscore":29}],19:[function(require,module,exports){
 'use strict';
 var _ = require('underscore');
 
@@ -5737,7 +5726,7 @@ module.exports = function(AV) {
   };
 };
 
-},{"underscore":29}],21:[function(require,module,exports){
+},{"underscore":29}],20:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -5876,7 +5865,7 @@ module.exports = function(AV) {
   });
 };
 
-},{"underscore":29}],22:[function(require,module,exports){
+},{"underscore":29}],21:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -6162,7 +6151,7 @@ module.exports = function(AV) {
   });
 };
 
-},{"underscore":29}],23:[function(require,module,exports){
+},{"underscore":29}],22:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -6539,7 +6528,7 @@ module.exports = function(AV) {
 
 };
 
-},{"underscore":29}],24:[function(require,module,exports){
+},{"underscore":29}],23:[function(require,module,exports){
 'use strict';
 
 var _ = require('underscore');
@@ -7535,7 +7524,7 @@ module.exports = function(AV) {
   });
 };
 
-},{"underscore":29}],25:[function(require,module,exports){
+},{"underscore":29}],24:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -7618,39 +7607,14 @@ module.exports = function(AV) {
   }
 
   /**
-   * Call this method first to set up your authentication tokens for AV.
-   * You can get your keys from the Data Browser on avoscloud.com.
-   * @param {String} applicationId Your AV Application ID.
-   * @param {String} applicationKey Your AV JavaScript Key.
-   * @param {String} masterKey (optional) Your AVOSCloud Master Key. (Node.js only!).
+   * Call this method first to set up your backend server for AV.
+   * @param {String} serverURL Your backend server URL.
+   * @param {String} context Your backend server context.
    */
-  AV.initialize = function(applicationId, applicationKey, masterKey) {
-    if (masterKey) {
-      throw new Error("AV.initialize() was passed a Master Key, which is only " +
-        "allowed from within Node.js.");
-    }
-    AV._initialize(applicationId, applicationKey,masterKey);
+  AV.initialize = function(serverURL, context) {
+    AV.serverURL = serverURL;
+    AV.context = context;
   };
-
-  /**
-   * Call this method first to set up authentication tokens for AV.
-   * This method is for AV's own private use.
-   * @param {String} applicationId Your AV Application ID.
-   * @param {String} applicationKey Your AV Application Key
-   */
-   AV._initialize = function(applicationId, applicationKey, masterKey) {
-    if (AV.applicationId !== undefined &&
-        applicationId !== AV.applicationId  &&
-        applicationKey !== AV.applicationKey &&
-        masterKey !== AV.masterKey) {
-      console.warn('AVOSCloud SDK is already initialized, please don\'t reinitialize it.');
-    }
-    AV.applicationId = applicationId;
-    AV.applicationKey = applicationKey;
-    AV.masterKey = masterKey;
-    AV._useMasterKey = false;
-  };
-
 
   /**
    * Call this method to set production environment variable.
@@ -7860,6 +7824,9 @@ module.exports = function(AV) {
    * @ignore
    */
   AV._request = function(route, className, objectId, method, dataObject) {
+    if (!AV.serverURL) {
+      throw "You must specify your server URL and context using AV.initialize.";
+    }
     if (route !== "batch" &&
         route !== "classes" &&
         route !== "files" &&
@@ -8176,7 +8143,12 @@ module.exports = function(AV) {
 };
 
 }).call(this,require('_process'))
-},{"_process":28,"underscore":29}],26:[function(require,module,exports){
+},{"_process":28,"underscore":29}],25:[function(require,module,exports){
+'use strict';
+
+module.exports = "js0.6.4-proper";
+
+},{}],26:[function(require,module,exports){
 (function(root) {
   var localStorageMemory = {};
   var cache = {};
