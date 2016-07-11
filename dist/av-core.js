@@ -7616,6 +7616,10 @@ module.exports = function(AV) {
     AV.context = context;
   };
 
+  AV.setToken = function(token) {
+    AV.token = token;
+  };
+
   /**
    * Call this method to set production environment variable.
    * @param {Boolean} production True is production environment,and
@@ -7798,6 +7802,7 @@ module.exports = function(AV) {
       }
     };
     xhr.open(method, url, true);
+    xhr.setRequestHeader('Authorization', AV.token);
     xhr.setRequestHeader("Content-Type", "text/plain");  // avoid pre-flight.
     if (AV._isNode) {
       // Add a special user agent just for request from node.js.
