@@ -8,6 +8,9 @@ Fork from JavaScript SDK for [LeanCloud](http://leancloud.cn/) `v0.6.4`.
 
   `AV.initialize('http://localhost:8080', '/demo');`
 
+* 需设置 token 以满足服务端需求：`AV.setToken(token);`
+  > token 需从服务端获取
+
 * 目前仅支持基本的 CRUD 操作，不支持 CQL
 
 ## 使用方法请看 [官方文档](http://leancloud.cn/docs/js_guide.html)
